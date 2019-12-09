@@ -1,0 +1,24 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'BangSou' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for BangSou
+   pod "AFNetworking"
+   pod "SDWebImage"
+   pod "YYModel"
+   pod "SVProgressHUD"
+   pod "pop"
+
+  target 'BangSouTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'BangSouUITests' do
+    # Pods for testing
+  end
+
+end
