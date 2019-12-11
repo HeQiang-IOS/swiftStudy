@@ -44,13 +44,14 @@ struct CategoryHome: View {
                     .clipped()
                     .listRowInsets(EdgeInsets())
                 
+                
                 ForEach(categories.keys.sorted(), id: \.self) {
                     key in
                     //                    Text(key)
                     CategoryRow(categoryName: key, items: self.categories[key]!)
                 }.listRowInsets(EdgeInsets())
                 
-                NavigationLink(destination: LandmarkList()){
+                NavigationLink(destination: LandmarkList{LandmarkDetail(landmark: $0)}){
                     Text("See All")
                 }
             }
@@ -74,6 +75,6 @@ struct FeaturedLandmarks: View {
 
 struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryHome()
+        CategoryHome().environmentObject(UserData())
     }
 }

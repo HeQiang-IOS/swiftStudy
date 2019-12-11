@@ -7,10 +7,11 @@ Helpers for loading images and data.
 
 import Foundation
 import CoreLocation
-import UIKit
 import SwiftUI
+import ImageIO
 
 let landmarkData: [Landmark] = load("landmarkData.json")
+let features = landmarkData.filter { $0.isFeatured }
 let hikeData: [Hike] = load("hikeData.json")
 
 func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
