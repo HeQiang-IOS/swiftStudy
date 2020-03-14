@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let seg: UISegmentedControl = UISegmentedControl.init(frame: .init(x: 10, y: 100, width: 300, height: 40))
+    let seg: UISegmentedControl = UISegmentedControl.init(frame: .init(x: 10, y: 100, width: 300, height: 100))
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

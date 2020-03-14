@@ -1,0 +1,6 @@
+framework module Pods_SwiftUIBS {
+  umbrella header "Pods-SwiftUIBS-umbrella.h"
+
+  export *
+  module * { export * }
+}
